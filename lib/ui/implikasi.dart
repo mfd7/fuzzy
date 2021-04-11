@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:my_fuzzy_lib/my_fuzzy_lib.dart';
 
 import 'komposisiaturan.dart';
 
@@ -175,63 +176,3 @@ class ImplikasiScreenState extends State<Implikasi> {
   }
 }
 
-class Komposisi{
-  String bbOutput;
-  String baOutput;
-  String decisionRules1;
-  String decisionRules2;
-  String decisionRules3;
-  String decisionRules4;
-  double implikasiRules1;
-  double implikasiRules2;
-  double implikasiRules3;
-  double implikasiRules4;
-
-
-  Komposisi(this.bbOutput, this.baOutput, this.decisionRules1,
-      this.decisionRules2, this.decisionRules3, this.decisionRules4,
-      this.implikasiRules1, this.implikasiRules2, this.implikasiRules3,
-      this.implikasiRules4);
-
-  hitungBawah(){
-    List<double> _bawah = [];
-
-    if(decisionRules1 == bbOutput){
-      _bawah.add(implikasiRules1);
-    }
-    if(decisionRules2 == bbOutput){
-      _bawah.add(implikasiRules2);
-    }
-    if(decisionRules3 == bbOutput){
-      _bawah.add(implikasiRules3);
-    }
-    if(decisionRules4 == bbOutput){
-      _bawah.add(implikasiRules4);
-    }
-
-    var result = _bawah.reduce(max);
-    return result;
-  }
-
-  hitungAtas(){
-    List<double> _atas = [];
-
-    if(decisionRules1 == baOutput){
-      _atas.add(implikasiRules1);
-    }
-    if(decisionRules2 == baOutput){
-      _atas.add(implikasiRules2);
-    }
-    if(decisionRules3 == baOutput){
-      _atas.add(implikasiRules3);
-    }
-    if(decisionRules4 == baOutput){
-      _atas.add(implikasiRules4);
-    }
-
-    var result = _atas.reduce(max);
-    return result;
-  }
-
-
-}

@@ -24,6 +24,9 @@ dependencies:
   flutter:
     sdk: flutter
   syncfusion_flutter_charts: ^19.1.55+1
+  my_fuzzy_lib:
+    git:
+      url: https://github.com/mfd7/my_fuzzy_lib
 
 
   # The following adds the Cupertino Icons font to your application.

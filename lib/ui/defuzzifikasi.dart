@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_fuzzy_lib/my_fuzzy_lib.dart';
 
 class Defuzzifikasi extends StatefulWidget {
   final double komposisiBawah;
@@ -95,24 +96,5 @@ class DefuzzifikasiScreenState extends State<Defuzzifikasi> {
         ),
       ),
     );
-  }
-}
-
-class Centroid {
-  int sigmaBawah;
-  int sigmaAtas;
-  double komposisiBawah;
-  double komposisiAtas;
-  int nBawah;
-  int nAtas;
-
-  Centroid(this.sigmaBawah, this.sigmaAtas, this.komposisiBawah,
-      this.komposisiAtas, this.nBawah, this.nAtas);
-
-  hitungCentroid() {
-    var result =
-        (((sigmaBawah * komposisiBawah) + (sigmaAtas * komposisiAtas)) /
-            ((komposisiBawah * nBawah) + (komposisiAtas * nAtas)));
-    return result;
   }
 }

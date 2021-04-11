@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fuzzy/ui/fuzzifikasi.dart';
+import 'package:my_fuzzy_lib/my_fuzzy_lib.dart';
 
 class Soal extends StatefulWidget {
   final List<String> input1;
@@ -135,43 +136,5 @@ class SoalScreenState extends State<Soal> {
         ),
       ),
     );
-  }
-}
-
-class Perhitungan {
-  int _bainput = 0;
-  int _bbinput = 0;
-  int _soalinput = 0;
-
-  Perhitungan(this._bainput, this._bbinput, this._soalinput);
-
-  int get bainput => _bainput;
-
-  set bainput(int value) {
-    _bainput = value;
-  }
-
-  int get bbinput => _bbinput;
-
-  set bbinput(int value) {
-    _bbinput = value;
-  }
-
-  int get soalinput => _soalinput;
-
-  set soalinput(int value) {
-    _soalinput = value;
-  }
-
-  generatemikroBawah(_bainput, _soalinput, _bbinput) {
-    var result = (_bainput - _soalinput) / (_bainput - _bbinput);
-
-    return result;
-  }
-
-  generatemikroAtas(_bainput, _soalinput, _bbinput) {
-    var result = (_soalinput - _bbinput) / (_bainput - _bbinput);
-
-    return result;
   }
 }

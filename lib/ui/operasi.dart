@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fuzzy/ui/implikasi.dart';
+import 'package:my_fuzzy_lib/my_fuzzy_lib.dart';
 
 class Operasi extends StatefulWidget {
   final List<String> input1;
@@ -203,52 +204,5 @@ class OperasiScreenState extends State<Operasi> {
         ],
       ),
     );
-  }
-}
-
-class OperasiFuzzy {
-  String decision1;
-  String decision2;
-  String decision3;
-  String bbInput1;
-  String baInput1;
-  double bbMikroInput1;
-  double baMikroInput1;
-  String bbInput2;
-  String baInput2;
-  double bbMikroInput2;
-  double baMikroInput2;
-
-  OperasiFuzzy(
-      this.decision1,
-      this.decision2,
-      this.decision3,
-      this.bbInput1,
-      this.baInput1,
-      this.bbMikroInput1,
-      this.baMikroInput1,
-      this.bbInput2,
-      this.baInput2,
-      this.bbMikroInput2,
-      this.baMikroInput2);
-
-  Hitung() {
-    var result;
-    List<double> _value = [];
-    if (decision1 == bbInput1 && decision2 == baInput2) {
-      _value = [bbMikroInput1, baMikroInput2];
-      result = _value.reduce(min);
-    } else if (decision1 == bbInput1 && decision2 == bbInput2) {
-      _value = [bbMikroInput1, bbMikroInput2];
-      result = _value.reduce(min);
-    } else if (decision1 == baInput1 && decision2 == baInput2) {
-      _value = [baMikroInput1, baMikroInput2];
-      result = _value.reduce(min);
-    } else if (decision1 == baInput1 && decision2 == bbInput2) {
-      _value = [baMikroInput1, bbMikroInput2];
-      result = _value.reduce(min);
-    }
-
-    return result;
   }
 }
