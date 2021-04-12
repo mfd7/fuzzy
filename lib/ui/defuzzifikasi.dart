@@ -56,10 +56,14 @@ class DefuzzifikasiScreenState extends State<Defuzzifikasi> {
                   int sigmaAtas = 0;
                   Random random = new Random();
                   for (var i = 0; i < int.parse(_nController.text); i++) {
-                    var _randomBawah =
-                        random.nextInt(int.parse(widget.output[3]) - 0);
-                    var _randomAtas =
-                        random.nextInt(int.parse(widget.output[5]) - 0);
+                    var _randomBawah = random.nextInt(
+                            int.parse(widget.output[5]) -
+                                int.parse(widget.output[3])) +
+                        int.parse(widget.output[3]);
+                    var _randomAtas = random.nextInt(
+                            int.parse(widget.output[5]) -
+                                int.parse(widget.output[3])) +
+                        int.parse(widget.output[3]);
                     sigmaBawah = sigmaBawah + _randomBawah;
                     sigmaAtas = sigmaAtas + _randomAtas;
                   }

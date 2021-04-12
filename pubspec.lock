@@ -62,6 +62,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_document_picker:
+    dependency: "direct main"
+    description:
+      name: flutter_document_picker
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.0.1-nullsafety.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -93,7 +100,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "3c41832f520c2d106ac609c8863a5edc6dd73e82"
+      resolved-ref: "9b6144984dd10510a77ef43fe1974ed7ac7d14e7"
       url: "https://github.com/mfd7/my_fuzzy_lib"
     source: git
     version: "0.0.1"

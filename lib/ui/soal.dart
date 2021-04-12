@@ -70,6 +70,7 @@ class SoalScreenState extends State<Soal> {
                   child: TextField(
                     decoration: InputDecoration(border: OutlineInputBorder()),
                     controller: _soal1,
+                    keyboardType: TextInputType.number,
                   ),
                 ),
               ],
@@ -91,6 +92,7 @@ class SoalScreenState extends State<Soal> {
                   child: TextField(
                     decoration: InputDecoration(border: OutlineInputBorder()),
                     controller: _soal2,
+                    keyboardType: TextInputType.number,
                   ),
                 ),
               ],
